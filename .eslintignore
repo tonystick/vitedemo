@@ -1,0 +1,13 @@
+node_modules
+.eslintrc.js
+..eslintrc copy.js
+public
+vite.config.ts
+package.json
+package-lock.json
+index.html
+auto-imports.d.ts
+components.d.ts
+Dockerfile
+.prettierrc.js
+plugins
