@@ -12,6 +12,7 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 
 
 ## 项目结构
+```
 |-- vitedemo
     |-- .editorconfig               # config for common editor
     |-- .env.development
@@ -85,3 +86,4 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
             |-- AboutView.vue
             |-- GridView.vue
             |-- HomeView.vue
+```
