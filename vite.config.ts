@@ -50,4 +50,20 @@ export default defineConfig({
     }),
     deployTimeIndexHtmlPlugin(),
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: (id, api) => {
+          // console.log(id);
+          if (id.includes('element-plus')) {
+            return 'element-plus';
+          }
+          if (id.includes('/node_modules/lodash-es')) {
+            return 'lodash-es';
+          }
+          return 'vendor';
+        },
+      },
+    },
+  },
 });
