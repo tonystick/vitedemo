@@ -6,6 +6,7 @@ import Components from 'unplugin-vue-components/vite';
 import { defineConfig } from 'vite';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import deployTimeIndexHtmlPlugin from './plugins/deloyTimeIndexHtml';
+import gzipPlugin from 'rollup-plugin-gzip';
 
 const pathSrc = path.resolve(__dirname, 'src');
 // https://vitejs.dev/config/
@@ -49,19 +50,18 @@ export default defineConfig({
       customDomId: '__svg__icons__dom__',
     }),
     deployTimeIndexHtmlPlugin(),
+    gzipPlugin(),
   ],
   build: {
     rollupOptions: {
       output: {
         manualChunks: (id, api) => {
-          // console.log(id);
           if (id.includes('element-plus')) {
             return 'element-plus';
           }
           if (id.includes('/node_modules/lodash-es')) {
             return 'lodash-es';
           }
-          return 'vendor';
         },
       },
     },
