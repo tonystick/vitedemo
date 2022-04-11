@@ -53,7 +53,7 @@ const options = [
 ];
 
 function doLogin() {
-  login().then((data) => {
+  login('ta', '123').then((data) => {
     console.log(data);
   });
 }

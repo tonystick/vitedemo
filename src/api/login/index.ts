@@ -1,13 +1,14 @@
-import request from '@/core/request';
+import { post, get } from '@/core/request';
+import { RootModel, Person } from '@/models';
 
-export const login = () =>
-  request.request({
+export const login = (name: string, password: string) =>
+  post<RootModel<Person>>({
     url: '/login',
-    method: 'post',
+    data: { name, password },
   });
 
 export const user = () =>
-  request.request({
+  get({
     url: '/user',
     method: 'get',
   });
