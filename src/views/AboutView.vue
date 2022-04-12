@@ -23,6 +23,7 @@ import { ref } from 'vue';
 import SvgIcon from '@/components/SvgIcon.vue';
 import FormFormat from '@/components/FormFormat.vue';
 import { login } from '@/api/login';
+import { b64Decode, b64Encode } from '@/utils/base64';
 
 const baseUrl = import.meta.env.VITE_BASE_URL;
 const value = ref('');
@@ -55,6 +56,10 @@ const options = [
 function doLogin() {
   login('ta', '123').then((data) => {
     console.log(data);
+    const myString = '☸☹☺☻☼☾☿jdk你好的历史决定论 圣诞节';
+    const enStr = b64Encode(myString);
+    console.log(enStr);
+    console.log(b64Decode(enStr));
   });
 }
 </script>
