@@ -2,15 +2,14 @@
 import ChangeLanguage from './components/ChangeLanguage.vue';
 import BaseHeader from './components/layouts/BaseHeader.vue';
 import BaseSide from './components/layouts/BaseSide.vue';
-
 </script>
 
 <template>
   <ChangeLanguage>
     <BaseHeader />
-    <div style="display: flex;">
+    <div style="display: flex">
       <BaseSide />
-      <div>
+      <div style="flex: 1">
         <router-view />
       </div>
     </div>
