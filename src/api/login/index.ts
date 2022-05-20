@@ -10,5 +10,4 @@ export const login = (name: string, password: string) =>
 export const user = () =>
   get({
     url: '/user',
-    method: 'get',
   });

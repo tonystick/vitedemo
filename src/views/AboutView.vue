@@ -14,6 +14,42 @@
       <FormFormat />
 
       <el-button type="primary" @click="doLogin">request</el-button>
+
+      <svg
+        id="blobSvg"
+        viewBox="0 0 800 500"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="100%"
+      >
+        <g transform="translate(386, -159)">
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color: rgb(255, 95, 109)"></stop>
+              <stop offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <path
+            class="blob"
+            d="M288.5,305.5Q186,361,174,229.5Q162,98,276.5,174Q391,250,288.5,305.5Z"
+            fill="url(#gradient)"
+          ></path>
+        </g>
+        <g transform="translate(106, -98)">
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color: rgb(255, 95, 109)"></stop>
+              <stop offset="100%"></stop>
+            </linearGradient>
+          </defs>
+          <path
+            class="blob"
+            d="M288.5,305.5Q186,361,174,229.5Q162,98,276.5,174Q391,250,288.5,305.5Z"
+            fill="url(#gradient)"
+          ></path>
+        </g>
+      </svg>
     </div>
   </div>
 </template>

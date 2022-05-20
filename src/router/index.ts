@@ -9,7 +9,7 @@ const routes: RouteRecordRaw[] = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHashHistory('/folder/#/app/'),
   routes,
 });
 

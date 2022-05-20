@@ -1,11 +1,11 @@
 <template>
   <el-menu
     :default-active="defaultIndex"
-    @select="handleSelect"
     mode="horizontal"
     background-color="#545c64"
     text-color="#fff"
     active-text-color="#ffd04b"
+    @select="handleSelect"
   >
     <el-menu-item index="1">process center1</el-menu-item>
     <el-sub-menu index="2">
@@ -18,9 +18,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue';
 
-const defaultIndex = ref("2")
+const defaultIndex = ref('2');
 const handleSelect = (key: string, keyPath: string[]) => {
   console.log(key, keyPath);
 };
